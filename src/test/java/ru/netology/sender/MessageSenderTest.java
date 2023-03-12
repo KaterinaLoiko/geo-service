@@ -1,3 +1,5 @@
+package ru.netology.sender;
+
 import java.util.Map;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -8,10 +10,8 @@ import ru.netology.entity.Country;
 import ru.netology.entity.Location;
 import ru.netology.geo.GeoService;
 import ru.netology.i18n.LocalizationService;
-import ru.netology.sender.MessageSender;
-import ru.netology.sender.MessageSenderImpl;
 
-public class MessageSenderTest {
+class MessageSenderTest {
 
   static MessageSender messageSender;
 
