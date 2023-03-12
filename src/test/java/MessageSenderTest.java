@@ -19,9 +19,12 @@ public class MessageSenderTest {
   public static void beforeAll() {
     GeoService geoService = Mockito.mock(GeoService.class);
     LocalizationService localizationService = Mockito.mock(LocalizationService.class);
-    Mockito.when(geoService.byIp("96.44.183.149")).thenReturn(new Location("New York", Country.USA, " 10th Avenue", 32));
-    Mockito.when(geoService.byIp("76.44.183.149")).thenReturn(new Location("Berlin", Country.GERMANY, " 10th Avenue", 32));
-    Mockito.when(geoService.byIp("172.0.32.11")).thenReturn(new Location("Moscow", Country.RUSSIA, "Lenina", 15));
+    Mockito.when(geoService.byIp("96.44.183.149"))
+        .thenReturn(new Location("New York", Country.USA, " 10th Avenue", 32));
+    Mockito.when(geoService.byIp("76.44.183.149"))
+        .thenReturn(new Location("Berlin", Country.GERMANY, " 10th Avenue", 32));
+    Mockito.when(geoService.byIp("172.0.32.11"))
+        .thenReturn(new Location("Moscow", Country.RUSSIA, "Lenina", 15));
     Mockito.when(localizationService.locale(Country.RUSSIA)).thenReturn("Добро пожаловать");
     Mockito.when(localizationService.locale(Country.USA)).thenReturn("Welcome");
     Mockito.when(localizationService.locale(Country.GERMANY)).thenReturn("Welcome");

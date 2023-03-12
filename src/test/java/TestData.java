@@ -33,12 +33,16 @@ public class TestData {
 
   public static Stream<Arguments> sendData() {
     return Stream.of(
-        Arguments.of(ImmutableMap.<String, String>builder().put(MessageSenderImpl.IP_ADDRESS_HEADER, "172.0.32.11").build(), "Добро пожаловать"),
-        Arguments.of(ImmutableMap.<String, String>builder().put(MessageSenderImpl.IP_ADDRESS_HEADER, "76.44.183.149").build(), "Welcome"),
-        Arguments.of(ImmutableMap.<String, String>builder().put(MessageSenderImpl.IP_ADDRESS_HEADER, "96.44.183.149").build(), "Welcome"),
+        Arguments.of(ImmutableMap.<String, String>builder()
+            .put(MessageSenderImpl.IP_ADDRESS_HEADER, "172.0.32.11").build(), "Добро пожаловать"),
+        Arguments.of(ImmutableMap.<String, String>builder()
+            .put(MessageSenderImpl.IP_ADDRESS_HEADER, "76.44.183.149").build(), "Welcome"),
+        Arguments.of(ImmutableMap.<String, String>builder()
+            .put(MessageSenderImpl.IP_ADDRESS_HEADER, "96.44.183.149").build(), "Welcome"),
         Arguments.of(new HashMap<>(), "Welcome"),
         Arguments.of(
-            ImmutableMap.<String, String>builder().put(MessageSenderImpl.IP_ADDRESS_HEADER, "").build(), "Welcome")
+            ImmutableMap.<String, String>builder().put(MessageSenderImpl.IP_ADDRESS_HEADER, "")
+                .build(), "Welcome")
     );
   }
 }
